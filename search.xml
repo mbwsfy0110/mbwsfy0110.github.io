@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Linux命令行学习笔记</title>
+      <link href="/2022/06/28/Linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <url>/2022/06/28/Linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>linux下不根据后缀名识别文件的，所以后缀名对linux来说，是没啥用的。<br>对于linux来说，区分的是创建目录还是创建文件</p></blockquote><h4 id="1、cd命令"><a href="#1、cd命令" class="headerlink" title=" 1、cd命令  "></a><font color=#008000> 1、cd命令  </font></h4><p>返回上一级目录：cd ..<br>进入当前目录子目录：cd xx</p><h4 id="2、ls命令"><a href="#2、ls命令" class="headerlink" title=" 2、ls命令  "></a><font color=#008000> 2、ls命令  </font></h4><p>展示当前目录下的子目录、子文件名称：ls<br>展示当前目录下的子目录、子文件详细信息： ls -l</p><h4 id="3、touch"><a href="#3、touch" class="headerlink" title=" 3、touch  "></a><font color=#008000> 3、touch  </font></h4><p>在当前目录下创建名为xx的子文件：touch xx</p><h4 id="4、mkdir"><a href="#4、mkdir" class="headerlink" title=" 4、mkdir  "></a><font color=#008000> 4、mkdir  </font></h4><p>在当前目录下创建名为xx的子目录：mkdir xx</p><h4 id="5、find"><a href="#5、find" class="headerlink" title=" 5、find  "></a><font color=#008000> 5、find  </font></h4><p>在home找到名为xx的文件：find &#x2F;home -name xx，找不到无输出</p><ul><li>只要路径含有就会被输出，如 &#x2F;home&#x2F;xx&#x2F;yy</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 操作系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据库系统概论</title>
       <link href="/2022/06/25/hello-world/"/>
       <url>/2022/06/25/hello-world/</url>
