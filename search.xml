@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>数学公式整理</title>
+      <link href="/2022/07/03/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%95%B4%E7%90%86/"/>
+      <url>/2022/07/03/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%95%B4%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、立方和、立方差公式"><a href="#1、立方和、立方差公式" class="headerlink" title="1、立方和、立方差公式"></a>1、立方和、立方差公式</h3><p>a³-b³＝(a-b)(a²+ab+b²)</p><p>a³+b³&#x3D;(a+b)(a²-ab+b²)</p><p>(完全立方公式)</p><p>（a-b）³＝a³＋3ab²-3a²b-b³</p><p>（a+b）³＝a³+3ab²+3a²b+b³</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数学公式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数学公式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>树上问题的相关知识</title>
+      <link href="/2022/07/03/%E6%A0%91%E7%9A%84%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
+      <url>/2022/07/03/%E6%A0%91%E7%9A%84%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1、树的重心"><a href="#1、树的重心" class="headerlink" title=" 1、树的重心  "></a><font color=#008000> 1、树的重心  </font></h4><ul><li>树的重心的含义： 一棵无根树，所有点到某点距离和最小值所在的点，就是重心。</li><li>树的重心的性质（from oiwiki）： <blockquote><p>以树的重心为根时，所有子树的大小都不超过整棵树大小的一半。<br>树中所有点到某个点的距离和中，到重心的距离和是最小的；如果有两个重心，那么到它们的距离和一样。<br>把两棵树通过一条边相连得到一棵新的树，那么新的树的重心在连接原来两棵树的重心的路径上。<br>在一棵树上添加或删除一个叶子，那么它的重心最多只移动一条边的距离。</p></blockquote></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> acm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux命令行学习笔记</title>
       <link href="/2022/06/28/Linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
       <url>/2022/06/28/Linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
