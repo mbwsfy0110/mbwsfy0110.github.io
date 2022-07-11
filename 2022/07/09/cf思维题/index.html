@@ -14,7 +14,7 @@
 <meta property="og:description" content="1、B. Paranoid String题意：操作一：01可以变成1，操作二：10可以变成0。给定一个串，判断字串经过若干次操作，能否长度变成1，统计数量。 思路：对01来说，1可以吃掉0，然后前边不是0的，又可以通过10变成0。所以，能否变成一，取决于最后两个字符是否相同。 2、C. Zero Path题意：给定只包含-1，1的一个矩阵，问从矩阵左上角走到矩阵右下角，只能左走一步和右走一步，是否">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-09T13:03:46.000Z">
-<meta property="article:modified_time" content="2022-07-09T13:21:45.554Z">
+<meta property="article:modified_time" content="2022-07-11T02:27:54.931Z">
 <meta property="article:author" content="fxy">
 <meta property="article:tag" content="思维">
 <meta name="twitter:card" content="summary">
@@ -110,7 +110,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81B-Paranoid-String"><span class="toc-number">1.</span> <span class="toc-text">1、B. Paranoid String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81C-Zero-Path"><span class="toc-number">2.</span> <span class="toc-text">2、C. Zero Path</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81B-Paranoid-String"><span class="toc-number">1.</span> <span class="toc-text">1、B. Paranoid String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81C-Zero-Path"><span class="toc-number">2.</span> <span class="toc-text">2、C. Zero Path</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81C-Helping-the-Nature"><span class="toc-number">3.</span> <span class="toc-text">3、C. Helping the Nature</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -164,7 +164,9 @@
 <h3 id="2、C-Zero-Path"><a href="#2、C-Zero-Path" class="headerlink" title="2、C. Zero Path"></a>2、<a target="_blank" rel="noopener" href="https://codeforces.com/contest/1695/problem/C">C. Zero Path</a></h3><p>题意：给定只包含-1，1的一个矩阵，问从矩阵左上角走到矩阵右下角，只能左走一步和右走一步，是否存在路径使得和为0。</p>
 <p>思路: 利用dp求出来从左上到右下的最大和和最小和。观察发现，如果从同一点向下走一步和向右走一步，到达斜斜下方，那么结果相差可能为-2，0，2.所以矩阵能实现的结果的可能值是在min~max之间，和它俩奇偶性相同的数。</p>
 <p>拓展：思考如何打印出来路径</p>
-
+<h3 id="3、C-Helping-the-Nature"><a href="#3、C-Helping-the-Nature" class="headerlink" title="3、C. Helping the Nature"></a>3、<a target="_blank" rel="noopener" href="https://codeforces.com/contest/1700/problem/C">C. Helping the Nature</a></h3><p>题意：给定三种操作，op1:将[1,i]位置对应的数字都减1，op2:将[i,n]位置对应的数字都减1，op3:将所有的数字都加1。问最少需要多少步，能把给定序列变成一个全零序列。</p>
+<p>思路：利用差分进行求解，举个具体例子然后结合代码进行分析。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">cin &gt;&gt; n;</span><br><span class="line"><span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> cur;<span class="comment">//代表第一位的终值</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">    cin &gt;&gt; x;</span><br><span class="line">    <span class="keyword">if</span>(i == <span class="number">1</span>) &#123;</span><br><span class="line">        pre = x;</span><br><span class="line">        cur = x;<span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(pre - x &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        cur -= pre - x;</span><br><span class="line">    &#125;</span><br><span class="line">    ans += <span class="built_in">abs</span>(pre - x);</span><br><span class="line">    pre = x;</span><br><span class="line">&#125;</span><br><span class="line">cout &lt;&lt; ans + <span class="built_in">abs</span>(cur) &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
   </div>
 </article>
 
@@ -193,7 +195,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81B-Paranoid-String"><span class="toc-number">1.</span> <span class="toc-text">1、B. Paranoid String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81C-Zero-Path"><span class="toc-number">2.</span> <span class="toc-text">2、C. Zero Path</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81B-Paranoid-String"><span class="toc-number">1.</span> <span class="toc-text">1、B. Paranoid String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81C-Zero-Path"><span class="toc-number">2.</span> <span class="toc-text">2、C. Zero Path</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81C-Helping-the-Nature"><span class="toc-number">3.</span> <span class="toc-text">3、C. Helping the Nature</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
