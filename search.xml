@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>acm数学总结</title>
+      <link href="/2022/07/21/acm%E6%95%B0%E5%AD%A6%E6%80%BB%E7%BB%93/"/>
+      <url>/2022/07/21/acm%E6%95%B0%E5%AD%A6%E6%80%BB%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<p>1、给定两个质数，m, n, 大于n * m - n - m的数都可以被整数个n和m唯一组成。</p><p>相关习题：<a href="https://ac.nowcoder.com/acm/contest/34980/K">Coins</a></p><p>总结：这个题很明显打表找规律，不知道定理也没关系。可以猜。猜两个质数是不是就可以组成一个其他的数。</p><p>2、<a href="https://acm.hdu.edu.cn/showproblem.php?pid=7158">ShuanQ</a><br>P × Q ≡ 1 mod M<br>P × Q − 1 &#x3D; k × M, k ≥ 1<br>M 是 kM 的一个比P, Q都大的质因子，最多只有一个质因子满足要求，如果有多个满足要求质因子M1,M2，那么k<em>M &#x3D; M1 * M2 &gt; P</em>Q 矛盾。</p><p>思路：先把1~1e6的质数都筛出来，然后暴力求出来M。然后就可以求r了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> acm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>割点和桥</title>
       <link href="/2022/07/16/%E5%89%B2%E7%82%B9%E5%92%8C%E6%A1%A5/"/>
       <url>/2022/07/16/%E5%89%B2%E7%82%B9%E5%92%8C%E6%A1%A5/</url>
