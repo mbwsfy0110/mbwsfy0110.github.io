@@ -54,17 +54,17 @@
     
     
     <entry>
-      <title>负环</title>
-      <link href="/2022/07/14/%E8%B4%9F%E7%8E%AF/"/>
-      <url>/2022/07/14/%E8%B4%9F%E7%8E%AF/</url>
+      <title>差分约束</title>
+      <link href="/2022/07/14/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/"/>
+      <url>/2022/07/14/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h3 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h3><h4 id="1、差分约束"><a href="#1、差分约束" class="headerlink" title="1、差分约束"></a>1、差分约束</h4><p>差分约束时一种特殊的$N$元一次不等式组，它包含$N$ 个变量$X_1$~$X_2$以及$M$个约束条件，每个约束条件都是由两个变量做差构成的，形如$X_i - X_j  \leq c_k$，其中$c_k$是常数。我们要解决的是，找到一组解$X_1&#x3D;a_1, X_2 &#x3D; a_2,…,X_n &#x3D; a_n$。  </p><p>差分约束系统条件$X_i - X_j \leq c_k$，可以变形为$X_i \geq c_k + X_j$。这与单源最短路中的三角形不等式$dist[y] \leq dist[x] + z$非常相似。可以把每个变量$X_i$看作一个有向图的节点i，对于每一个约束条件$X_i \geq c_k + X_j$建一条有向边，一条从结点$j$指向结点$i$的长度为$c_k$的有向边。</p><h4 id="2、差分约束解的情况"><a href="#2、差分约束解的情况" class="headerlink" title="2、差分约束解的情况"></a>2、差分约束解的情况</h4><ul><li>差分约束系统要么无解，要么有无数组解。求不出最短路或最长路的时候是任意解。</li><li>对于a-b&lt;&#x3D;c,建边是b-&gt;a，长度为c的边，求最短路，若存在负环，则无解。<br>对于a-b&gt;&#x3D;c,建边是b-&gt;a,  长度为c的边，求最长路，若存在正环，则无解。</li></ul><h3 id="二、代码部分"><a href="#二、代码部分" class="headerlink" title="二、代码部分"></a>二、代码部分</h3><h3 id="三、例题"><a href="#三、例题" class="headerlink" title="三、例题"></a>三、例题</h3><p>1、#### 2、<a href="https://acm.hdu.edu.cn/showproblem.php?pid=3666">THE MATRIX PROBLEM</a></p><p>题意：给一个$n \times m$的矩阵C，矩阵中每个元素都是不超过1000的正整数。问题是求解，是否存在n个数$a_1$,$a_2$,…,$a_n$和m个数$b_1$,$b_2$,…,$b_m$，满足$$L \leq a[i] \times c[i][j] \div b[j] \leq U $$</p><p>思路:对不等式两边同时取log转化为差分约束的不等式形式。</p><p>细节：</p><ul><li>边数限制</li><li>取log之后转换为什么形式</li></ul>]]></content>
       
       
       
         <tags>
             
-            <tag> 负环 </tag>
+            <tag> 差分约束 </tag>
             
         </tags>
       
