@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="一、线段树前置知识1、空间需要开四倍 二、线段树维护点（求区间最大值、最小值）三、线段树维护区间（求区间最大值、最小值）（如下代码以维护区间最大值为例） 1、pushup操作由子结点更新父节点的连续子段和最大，有三种情况。第一种，最大值刚好是左儿子连续子段和最大值。第二种，最大值刚好是右儿子连续字段和最大值。第三种情况，有交叉，最大值是左儿子的后缀和和右儿子的前缀和的一个组合。 父结点的前缀和最大">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线段树">
+<meta property="og:url" content="http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/index.html">
+<meta property="og:site_name" content="fxy&#39;Blog">
+<meta property="og:description" content="一、线段树前置知识1、空间需要开四倍 二、线段树维护点（求区间最大值、最小值）三、线段树维护区间（求区间最大值、最小值）（如下代码以维护区间最大值为例） 1、pushup操作由子结点更新父节点的连续子段和最大，有三种情况。第一种，最大值刚好是左儿子连续子段和最大值。第二种，最大值刚好是右儿子连续字段和最大值。第三种情况，有交叉，最大值是左儿子的后缀和和右儿子的前缀和的一个组合。 父结点的前缀和最大">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-07-22T01:35:50.000Z">
+<meta property="article:modified_time" content="2022-07-22T01:56:13.611Z">
+<meta property="article:author" content="fxy">
+<meta property="article:tag" content="线段树">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>线段树</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Category</a></li><!--
+     --><!--
+       --><li><a href="/tags/">tags</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2022/07/21/acm%E6%95%B0%E5%AD%A6%E6%80%BB%E7%BB%93/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&text=线段树"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&title=线段树"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&is_video=false&description=线段树"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=线段树&body=Check out this article: http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&title=线段树"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&title=线段树"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&title=线段树"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&title=线段树"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&name=线段树&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&t=线段树"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">一、线段树前置知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%BB%B4%E6%8A%A4%E7%82%B9%EF%BC%88%E6%B1%82%E5%8C%BA%E9%97%B4%E6%9C%80%E5%A4%A7%E5%80%BC%E3%80%81%E6%9C%80%E5%B0%8F%E5%80%BC%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">二、线段树维护点（求区间最大值、最小值）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%BB%B4%E6%8A%A4%E5%8C%BA%E9%97%B4%EF%BC%88%E6%B1%82%E5%8C%BA%E9%97%B4%E6%9C%80%E5%A4%A7%E5%80%BC%E3%80%81%E6%9C%80%E5%B0%8F%E5%80%BC%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">三、线段树维护区间（求区间最大值、最小值）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81pushup%E6%93%8D%E4%BD%9C"><span class="toc-number">3.1.</span> <span class="toc-text">1、pushup操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-build%E6%93%8D%E4%BD%9C"><span class="toc-number">3.2.</span> <span class="toc-text">2.build操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81modify%E6%93%8D%E4%BD%9C"><span class="toc-number">3.3.</span> <span class="toc-text">3、modify操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81query%E6%93%8D%E4%BD%9C"><span class="toc-number">3.4.</span> <span class="toc-text">4、query操作</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        线段树
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">fxy</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-07-22T01:35:50.000Z" itemprop="datePublished">2022-07-22</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/acm/">acm</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" rel="tag">线段树</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="一、线段树前置知识"><a href="#一、线段树前置知识" class="headerlink" title="一、线段树前置知识"></a>一、线段树前置知识</h3><p>1、空间需要开四倍</p>
+<h3 id="二、线段树维护点（求区间最大值、最小值）"><a href="#二、线段树维护点（求区间最大值、最小值）" class="headerlink" title="二、线段树维护点（求区间最大值、最小值）"></a>二、线段树维护点（求区间最大值、最小值）</h3><h3 id="三、线段树维护区间（求区间最大值、最小值）"><a href="#三、线段树维护区间（求区间最大值、最小值）" class="headerlink" title="三、线段树维护区间（求区间最大值、最小值）"></a>三、线段树维护区间（求区间最大值、最小值）</h3><p>（如下代码以维护区间最大值为例）</p>
+<h4 id="1、pushup操作"><a href="#1、pushup操作" class="headerlink" title="1、pushup操作"></a>1、pushup操作</h4><p>由子结点更新父节点的连续子段和最大，有三种情况。<br>第一种，最大值刚好是左儿子连续子段和最大值。<br>第二种，最大值刚好是右儿子连续字段和最大值。<br>第三种情况，有交叉，最大值是左儿子的后缀和和右儿子的前缀和的一个组合。</p>
+<p>父结点的前缀和最大，需要由儿子结点来更新。<br>一种情况是，父结点的前缀最大值是左儿子的前缀最大值。<br>另一种情况是，父结点的前缀最大值，是左儿子的所有点和右儿子前缀和的最大值之和。</p>
+<p>综上，我们需要维护每一个节点的前缀和，后缀和，区间和，最大区间和，左端点，右端点。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">pushup</span><span class="params">(node &amp;u, node &amp;l, node &amp;r)</span></span>&#123;</span><br><span class="line">    u.sum = l.sum + r.sum;</span><br><span class="line">    u.lmax = <span class="built_in">max</span>(l.lmax, l.sum + r.lmax);</span><br><span class="line">    u.rmax = <span class="built_in">max</span>(r.rmax, r.sum + l.rmax);</span><br><span class="line">    u.tmax = <span class="built_in">max</span>(l.tmax, <span class="built_in">max</span>(r.tmax, l.rmax + r.lmax)); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">pushup</span><span class="params">(<span class="type">int</span> u)</span></span>&#123;</span><br><span class="line">    <span class="built_in">pushup</span>(tr[u], tr[u &lt;&lt; <span class="number">1</span>], tr[u &lt;&lt; <span class="number">1</span> | <span class="number">1</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-build操作"><a href="#2-build操作" class="headerlink" title="2.build操作"></a>2.build操作</h4><p>建树操作的pushup：在建树之前，每个结点都应该有值，所以需要利用子节点对父节点进行pushup操作。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> l, <span class="type">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l == r)&#123;</span><br><span class="line">        tr[u] = &#123;l, r, v[l], v[l], v[l], v[l]&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        tr[u] = &#123;l, r&#125;; <span class="comment">//非常重要，不然没法更新结点区间范围</span></span><br><span class="line">        <span class="type">int</span> mid = tr[u].l + tr[u].r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">build</span>(u &lt;&lt; <span class="number">1</span>, l, mid);</span><br><span class="line">        <span class="built_in">build</span>(u &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, mid + <span class="number">1</span>, r);</span><br><span class="line">        <span class="built_in">pushup</span>(u);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、modify操作"><a href="#3、modify操作" class="headerlink" title="3、modify操作"></a>3、modify操作</h4><p>modify的pushup操作：每次更新结点值的时候，父节点的tmax可能发生改变，所以需要用pushup进行更新。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">modify</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> pos, <span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(tr[u].l == pos &amp;&amp;  tr[u].r == pos)&#123;</span><br><span class="line">        tr[u] = &#123;pos, pos, x, x, x, x&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="type">int</span> mid = tr[u].l + tr[u].r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(pos &lt;= mid) <span class="built_in">modify</span>(u &lt;&lt; <span class="number">1</span>, pos, x);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">modify</span>(u &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, pos, x);</span><br><span class="line">        <span class="built_in">pushup</span>(u);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、query操作"><a href="#4、query操作" class="headerlink" title="4、query操作"></a>4、query操作</h4><p>不断返回结点，形成一棵覆盖查询区间的小树，然后维护这个小树的区间最大值。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">node <span class="title">query</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> l, <span class="type">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(tr[u].l &gt;= l &amp;&amp; tr[u].r &lt;= r) <span class="keyword">return</span> tr[u];</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="type">int</span> mid = tr[u].l + tr[u].r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(r &lt;= mid) <span class="keyword">return</span> <span class="built_in">query</span>(u &lt;&lt; <span class="number">1</span>, l, r);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(l &gt; mid) <span class="keyword">return</span> <span class="built_in">query</span>(u &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, l, r);</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            node ls = <span class="built_in">query</span>(u &lt;&lt; <span class="number">1</span>, l, r);</span><br><span class="line">            node rs = <span class="built_in">query</span>(u &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, l, r);</span><br><span class="line">            node res;</span><br><span class="line">            <span class="built_in">pushup</span>(res, ls, rs);</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/categories/">Category</a></li>
+         
+          <li><a href="/tags/">tags</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">一、线段树前置知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%BB%B4%E6%8A%A4%E7%82%B9%EF%BC%88%E6%B1%82%E5%8C%BA%E9%97%B4%E6%9C%80%E5%A4%A7%E5%80%BC%E3%80%81%E6%9C%80%E5%B0%8F%E5%80%BC%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">二、线段树维护点（求区间最大值、最小值）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%BB%B4%E6%8A%A4%E5%8C%BA%E9%97%B4%EF%BC%88%E6%B1%82%E5%8C%BA%E9%97%B4%E6%9C%80%E5%A4%A7%E5%80%BC%E3%80%81%E6%9C%80%E5%B0%8F%E5%80%BC%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">三、线段树维护区间（求区间最大值、最小值）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81pushup%E6%93%8D%E4%BD%9C"><span class="toc-number">3.1.</span> <span class="toc-text">1、pushup操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-build%E6%93%8D%E4%BD%9C"><span class="toc-number">3.2.</span> <span class="toc-text">2.build操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81modify%E6%93%8D%E4%BD%9C"><span class="toc-number">3.3.</span> <span class="toc-text">3、modify操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81query%E6%93%8D%E4%BD%9C"><span class="toc-number">3.4.</span> <span class="toc-text">4、query操作</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&text=线段树"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&title=线段树"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&is_video=false&description=线段树"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=线段树&body=Check out this article: http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&title=线段树"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&title=线段树"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&title=线段树"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&title=线段树"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&name=线段树&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/07/22/%E7%BA%BF%E6%AE%B5%E6%A0%91/&t=线段树"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2022
+    fxy
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Category</a></li><!--
+     --><!--
+       --><li><a href="/tags/">tags</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
