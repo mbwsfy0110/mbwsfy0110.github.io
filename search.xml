@@ -3,7 +3,27 @@
   <entry>
     <title>下一件事情</title>
     <url>/2022/10/03/%E4%B8%8B%E4%B8%80%E4%BB%B6%E4%BA%8B%E6%83%85/</url>
-    <content><![CDATA[<p><img src="https://user-images.githubusercontent.com/99975690/193596772-29a32b3a-9baa-4dc2-a718-9c1a37c6163a.jpg" alt="v2-10fb0670c436035f9a97611cb03fdf9c_1440w" loading="lazy"><br>1、给博客增加评论区功能<br>2、改变代码样式（感觉博客自带对代码爱好者来说不是很友好）<br>3、更改文章下方博客链接（感觉有点没必要且链接太长有点丑）<br>4、一键复制功能给加上<br>5、学习一下markdown的一些语法（好多忘了，用到才去查）<br>6、学习一下子分类是怎么用的</p>
+    <content><![CDATA[<p><img src="https://user-images.githubusercontent.com/99975690/193596772-29a32b3a-9baa-4dc2-a718-9c1a37c6163a.jpg" alt="v2-10fb0670c436035f9a97611cb03fdf9c_1440w" loading="lazy"></p>
+<table>
+<thead>
+<tr>
+<th>标号</th>
+<th>事项</th>
+<th>完成时间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>给博客增加评论区功能</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody></table>
+<p>1、给博客增加评论区功能<br>2、改变代码样式（感觉博客自带对代码爱好者来说不是很友好）<br>3、更改文章下方博客链接（感觉有点没必要且链接太长有点丑）<br>4、一键复制功能给加上<br>5、学习一下markdown的一些语法（好多忘了，用到才去查）<br>6、学习一下子分类是怎么用的</p>
 ]]></content>
   </entry>
   <entry>
