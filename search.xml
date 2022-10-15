@@ -61,6 +61,25 @@
 ]]></content>
   </entry>
   <entry>
+    <title>清醒自律,热爱生活</title>
+    <url>/2022/10/05/%E6%B8%85%E9%86%92%E8%87%AA%E5%BE%8B-%E7%83%AD%E7%88%B1%E7%94%9F%E6%B4%BB/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="9804788df5f1aa31157fc0391b5c0b32b85360f4365ec19992b59d84b04d6116">7763ba0d8906c78f6d10e0023d32f7d513d52c310de14a4cc9a2a868f509c2dd1b930fdfbef8ab2fc1e1e39c7da71d1cde69fbf8cfb6a25d617d81f092082f398b5ee16defff788f3d47fad71d79e5400851853f521d9dcbf58035bd4403be8ed424abe61e777adf3d7ff705e24ef4737b3a11f9d1f6c50df4e8704928914e20</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>再见了，两年的acm生活</title>
     <url>/2022/10/08/%E5%86%8D%E8%A7%81%E4%BA%86%EF%BC%8C%E4%B8%A4%E5%B9%B4%E7%9A%84acm%E7%94%9F%E6%B4%BB/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -95,22 +114,308 @@
       </tags>
   </entry>
   <entry>
-    <title>清醒自律,热爱生活</title>
-    <url>/2022/10/05/%E6%B8%85%E9%86%92%E8%87%AA%E5%BE%8B-%E7%83%AD%E7%88%B1%E7%94%9F%E6%B4%BB/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="9804788df5f1aa31157fc0391b5c0b32b85360f4365ec19992b59d84b04d6116">7763ba0d8906c78f6d10e0023d32f7d513d52c310de14a4cc9a2a868f509c2dd1b930fdfbef8ab2fc1e1e39c7da71d1cde69fbf8cfb6a25d617d81f092082f398b5ee16defff788f3d47fad71d79e5400851853f521d9dcbf58035bd4403be8ed424abe61e777adf3d7ff705e24ef4737b3a11f9d1f6c50df4e8704928914e20</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <title>数据库系统概论</title>
+    <url>/2022/06/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<h2 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h2><h4 id="1、数据的独立性"><a href="#1、数据的独立性" class="headerlink" title=" 1、数据的独立性  "></a><font color=#008000> 1、数据的独立性  </font></h4><ul>
+<li>物理独立性：用户程序和数据库中的数据的物理存储是相互独立的。</li>
+<li>逻辑独立性：用户程序和数据库的逻辑结果是相互独立的。</li>
+<li>保证：二级映像功能</li>
+</ul>
+<h4 id="2、数据模型"><a href="#2、数据模型" class="headerlink" title=" 2、数据模型  "></a><font color=#008000> 2、数据模型  </font></h4><p>数据模型的作用：数据模型是数据库系统的基础，任何一个DBMS都是以某一个数据模型为基础。<br>数据模型的三个要素：数据结构、数据操作、数据完整性约束条件</p>
+<h4 id="3、数据库、数据库系统"><a href="#3、数据库、数据库系统" class="headerlink" title=" 3、数据库、数据库系统  "></a><font color=#008000> 3、数据库、数据库系统  </font></h4><p>数据库概念：数据库是长期储存在计算机中、有组织、可共享的大量数据的集合。<br>数据库系统概念：数据库系统是由数据库、数据库管理系统、应用程序、数据库管理员组成的存储、管理、处理和维护数据的系统。<br>数据库系统的特征：①数据结构化（和文件系统的本质区别）；②数据独立性高；③数据的共享性高、易扩充、冗余度低；④由数据库管理系统统一管理。</p>
+<h4 id="4、数据库管理系统的主要功能："><a href="#4、数据库管理系统的主要功能：" class="headerlink" title=" 4、数据库管理系统的主要功能：  "></a><font color=#008000> 4、数据库管理系统的主要功能：  </font></h4><ul>
+<li>数据库定义功能</li>
+<li>数据组织、存储和管理功能</li>
+<li>数据操纵功能</li>
+<li>数据库的事务管理和运行管理</li>
+<li>数据库的建立和维护功能</li>
+<li>其他功能，如不同数据库之间的互访和互操作等功能。</li>
+</ul>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h4 id="1、关系数据库结构及其形式化定义"><a href="#1、关系数据库结构及其形式化定义" class="headerlink" title=" 1、关系数据库结构及其形式化定义  "></a><font color=#008000> 1、关系数据库结构及其形式化定义  </font></h4><ul>
+<li>关系：&gt; 域（domain）、笛卡尔积（cartesian product：n元组，做笛卡尔积的每个集合中贡献一个数组成的集合；一个域允许的最大的不同取值的个数叫做基数）<br>&gt; n元关系（笛卡尔积的子集），属性，二元表格中的域，候选码-&gt;主码，主属性，非主属性&#x2F;非码属性，全码</li>
+<li>关系的类型：基本关系（基本表&#x2F;基表）、查询表、视图</li>
+<li>关系模式、关系（有一说一，这个不知道重点在哪里）</li>
+</ul>
+<h4 id="2、关系操作"><a href="#2、关系操作" class="headerlink" title=" 2、关系操作  "></a><font color=#008000> 2、关系操作  </font></h4><ul>
+<li>关系操作的特点、非关系操作的特点</li>
+</ul>
+<h4 id="3、关系的完整性（三类完整性约束条件）"><a href="#3、关系的完整性（三类完整性约束条件）" class="headerlink" title=" 3、关系的完整性（三类完整性约束条件）  "></a><font color=#008000> 3、关系的完整性（三类完整性约束条件）  </font></h4><ul>
+<li>关系的两个不变性</li>
+<li>实体完整性：实体完整性规则+实体完整性（？不太明白例题讲了是干啥的）</li>
+<li>参照完整性：<ul>
+<li>外码（foreign key）、参照关系(referencing relation)、被参照关系(referenced relation)&#x2F;目标关系(target relation)</li>
+<li>关系R和S不一定是不同的关系（理解一下书上的例题）</li>
+<li>关系间引用属性-&gt;相互制约</li>
+</ul>
+</li>
+<li>用户定义的完整性</li>
+</ul>
+<h4 id="4、关系代数"><a href="#4、关系代数" class="headerlink" title=" 4、关系代数  "></a><font color=#008000> 4、关系代数  </font></h4><ul>
+<li>传统的集合运算<ul>
+<li>并（union）：</li>
+<li>差（except）</li>
+<li>交</li>
+<li>笛卡尔积</li>
+</ul>
+</li>
+<li>专门的关系运算<ul>
+<li>选择（select）<br>不等于：&lt;&gt; </li>
+<li>投影（projection）：对列的操作</li>
+<li>连接（join）：等值连接（equal join） &amp; 自然连接（natural join）（本质上是在自然连接基础上取消重复的列）<br>           悬浮元组、外连接（outer join：保留悬浮元组的值，空的地方置NULL）、左外连接（只保留左边关系的悬浮元组）、右外连接</li>
+<li>除运算（division）：记住书上的例子吧~</li>
+</ul>
+</li>
+<li>五种基本运算</li>
+</ul>
+<h4 id="5、关系的完整性"><a href="#5、关系的完整性" class="headerlink" title=" 5、关系的完整性  "></a><font color=#008000> 5、关系的完整性  </font></h4><p>·专门的关系运算<br>    &gt; 选择：<br>    &gt; 投影：积分投影<br>    &gt; 连接：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">非等值连接：</span><br><span class="line">等值连接：</span><br><span class="line">自然连接：自然连接是等值连接去掉相同的属性列后的结果</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="第三章-关系数据库标准语言SQL"><a href="#第三章-关系数据库标准语言SQL" class="headerlink" title="第三章 关系数据库标准语言SQL"></a>第三章 关系数据库标准语言SQL</h2><h4 id="1、注意事项"><a href="#1、注意事项" class="headerlink" title=" 1、注意事项  "></a><font color=#008000> 1、注意事项  </font></h4><p>※对于表意不明确的地方，要加上表名<br>※多做几遍评测平台的题目<br>※写sql语句的注意事项<br>※对于同一个表查询的时候，记得起别名</p>
+<h4 id="2、数据定义："><a href="#2、数据定义：" class="headerlink" title=" 2、数据定义：  "></a><font color=#008000> 2、数据定义：  </font></h4><p>alter table &lt;表名&gt;<br>[add [column] &lt;新列名&gt;&lt;数据类型&gt;[完整性约束]]<br>[add&lt;表级完整性约束&gt;]<br>[drop [column]&lt;列名&gt;[cascade|restrict]]<br>[drop constraint&lt;完整性约束条件&gt;[restrict|cascade]]<br>[alter column&lt;列名&gt;&lt;数据类型&gt;]</p>
+<ul>
+<li>cascade：对表的删除没有约束条件</li>
+<li>restraint：想要删除的基本表不能被其他表所引用</li>
+</ul>
+<p>对表的约束（列级约束和表级约束）<br>列级约束有六种：主键Primary key、外键foreign key 、唯一 unique、检查 checck 、默认default 、非空&#x2F;空值 not null&#x2F; null</p>
+<p>表级约束有四种：主键、外键、唯一、检查</p>
+<h4 id="3、数据查询："><a href="#3、数据查询：" class="headerlink" title=" 3、数据查询：  "></a><font color=#008000> 3、数据查询：  </font></h4><ul>
+<li>distinct：消除重复的行</li>
+<li>between and;not between and: 确定范围</li>
+<li>in; not in: 确定集合</li>
+<li>like; not like: 字符匹配，a%b,以a开头，以b结尾，任意长度的字符串；a_b，以a开头，以b结尾，总长度为3的字符串</li>
+<li>is null; is not null: 空值</li>
+<li>and, or, not：逻辑运算</li>
+<li>聚集函数</li>
+<li>group by：将查询结果按某一列或多列的值分组，值相等的为一组</li>
+<li>等值与非等值连接到查询<ul>
+<li>等值连接</li>
+<li>自然连接</li>
+</ul>
+</li>
+<li>自身连接：要新建别名</li>
+<li>外连接：悬浮元组、左外连接、右外连接</li>
+<li>多表连接：很多个表进行连接的时候，直接进行条件连接，不写嵌套查询</li>
+</ul>
+<blockquote>
+<p>嵌套查询：<br>子查询不能使用order by语句，order by只能对最终结果进行排序<br>对于查询结果是集合的情况，使用谓词in<br>不相关子查询<br>相关子查询：父查询定义的别名，子查询会用到</p>
+</blockquote>
+<ul>
+<li>any（some）;all</li>
+<li>exists</li>
+<li>集合查询:union,intersect,except</li>
+</ul>
+<blockquote>
+<p>数据更新<br>插入数据：如果是数字的话，不要加引号！！！<br>修改数据：update student set sage &#x3D; 22 where sno &#x3D; ‘0501029’<br>删除数据：delete from student where sno &#x3D; ‘0501029’</p>
+</blockquote>
+<blockquote>
+<p>空值的处理<br>向表中插入空值，直接插入NULL，不加引号，像数字一样<br>空值的判断：is null; is not null</p>
+</blockquote>
+<h4 id="4、视图"><a href="#4、视图" class="headerlink" title=" 4、视图  "></a><font color=#008000> 4、视图  </font></h4><ul>
+<li>行列子集视图</li>
+<li>视图的作用</li>
+<li>视图相关sql语句</li>
+</ul>
+<p>视图：命名化的select语句<br>视图的定义存储下来</p>
+<p>–存在系统数据字典中<br>create view v_student () as + 子查询<br>    select student.sno,sname,cno,grade<br>    from Sdtudent, Sc	<br>    where student.sno &#x3D; sc.sno and cno &#x3D; ‘2’</p>
+<p>select * from v_student<br>子查询结果会作为视图结果</p>
+<p>select * from<br>视图作用：简化了用户书写SQL的复杂度<br>    保证了数据的安全性<br>    一定程度上保证数据的逻辑独立性<br>—-视图（连接查询、聚集函数）<br>–行列子集视图（来源于单表，视图中包含主键，只是去掉了不重要的属性列，并且去掉的属性列都可以取值为空）</p>
+<p>–with check option<br>—视图中，尽量不要带*号</p>
+<p>create view v_stu(sno,sname)<br>as<br>select sno, sname<br>from Student<br>where sdept &#x3D; ‘计算机’</p>
+<p>drop view 删除视图</p>
+<h2 id="第四章-数据库安全性"><a href="#第四章-数据库安全性" class="headerlink" title="第四章 数据库安全性"></a>第四章 数据库安全性</h2><h4 id="1、本章基于重点复习"><a href="#1、本章基于重点复习" class="headerlink" title=" 1、本章基于重点复习  "></a><font color=#008000> 1、本章基于重点复习  </font></h4><ul>
+<li>自主存取权限控制</li>
+<li>grant</li>
+<li>revoke</li>
+<li>角色</li>
+<li>完成权限的授权并传递出去</li>
+</ul>
+<h4 id="2、存取控制"><a href="#2、存取控制" class="headerlink" title=" 2、存取控制  "></a><font color=#008000> 2、存取控制  </font></h4><ul>
+<li>存取控制<ul>
+<li>数据库管理系统的存取控制子系统：定义用户权限+合法权限检查机制</li>
+<li>自主存取控制（DAC）</li>
+<li>强制存取控制（MAC）</li>
+</ul>
+</li>
+<li>自主存取控制方法<ul>
+<li>用户权限：数据库对象、操作权限</li>
+<li>定义存取权限&#x3D;授权</li>
+</ul>
+</li>
+<li>授权：授予与收回<ul>
+<li>grant：grant &lt;权限&gt; on &lt;对象类型&gt;&lt;对象名&gt; to &lt;用户&gt; [with grant option];&#x2F;&#x2F;不一定是只有一个权限，一个对象<br>with grant option: 被授权用户可以把权限授予其他用户，不能授予祖先用户</li>
+<li>revoke：revoke &lt;权限&gt; on &lt;数据对象&gt; from &lt;用户&gt; [cascade|restrict];</li>
+<li>revoke update(sno) on table student from userx;</li>
+</ul>
+</li>
+<li>数据库角色<ul>
+<li>角色是权限的集合</li>
+<li>创建角色：create role &lt;角色名&gt;</li>
+<li>给角色授权：grant &lt;权限&gt;</li>
+</ul>
+</li>
+</ul>
+<h2 id="第五章-数据库完整性"><a href="#第五章-数据库完整性" class="headerlink" title="第五章 数据库完整性"></a>第五章 数据库完整性</h2><h4 id="1、定义外键："><a href="#1、定义外键：" class="headerlink" title=" 1、定义外键：  "></a><font color=#008000> 1、定义外键：  </font></h4><p>  foreign key(属性) references student(属性)</p>
+<h4 id="2、触发器"><a href="#2、触发器" class="headerlink" title=" 2、触发器  "></a><font color=#008000> 2、触发器  </font></h4><p><img src="https://user-images.githubusercontent.com/99975690/174471296-4fc6f5f8-0e1f-4146-ad31-a104242b384b.jpg" alt="0AZF_~YZZY3O6)_F9G2BW{N" loading="lazy"></p>
+<h2 id="第六章-关系数据理论"><a href="#第六章-关系数据理论" class="headerlink" title="第六章 关系数据理论"></a>第六章 关系数据理论</h2><h4 id="1、问题的提出"><a href="#1、问题的提出" class="headerlink" title=" 1、问题的提出  "></a><font color=#008000> 1、问题的提出  </font></h4><ul>
+<li>关系模式可能存在的问题：数据冗余、更新异常、插入异常、删除异常</li>
+</ul>
+<h4 id="2、规范化"><a href="#2、规范化" class="headerlink" title=" 2、规范化  "></a><font color=#008000> 2、规范化  </font></h4><ul>
+<li>函数依赖：函数依赖定义、非平凡函数依赖、决定属性组&#x2F;决定因素、完全函数依赖、传递函数依赖</li>
+<li>码：候选码、超码、（候选码的任何真子集不一定是超码）、主码、主属性、非主属性&#x2F;非码属性、全码、外部码&#x2F;外码</li>
+<li>码：是码，就得能找出来一对一关系</li>
+</ul>
+<blockquote>
+<p>范式<br>规范化<br>2NF：①每一个非主属性完全依赖于任何一个候选码。②存在问题：插入异常、删除异常、修改复杂<br>3NF：①不存在传递函数依赖。②画有向图，根据图去判断是不是<br>BCNF：①Y非平凡函数依赖X，X有主码。<br>多值依赖：①多值依赖的性质；②多值依赖与函数依赖的区别<br>和BCNF类似，把函数依赖改成多值依赖即可<br>  P189：规范化过程</p>
+</blockquote>
+<h4 id="3、函数依赖的公理系统"><a href="#3、函数依赖的公理系统" class="headerlink" title=" 3、函数依赖的公理系统  "></a><font color=#008000> 3、函数依赖的公理系统  </font></h4><h2 id="第七章-数据库设计"><a href="#第七章-数据库设计" class="headerlink" title="第七章 数据库设计"></a>第七章 数据库设计</h2><h4 id="1、数据库设计概述"><a href="#1、数据库设计概述" class="headerlink" title=" 1、数据库设计概述  "></a><font color=#008000> 1、数据库设计概述  </font></h4><p>需求分析 -&gt; 概念结构设计 -&gt; 逻辑结构设计 -&gt; 物理结构设计 -&gt; 数据库实施 -&gt; 数据库运行和维护</p>
+<h4 id="2、需求分析"><a href="#2、需求分析" class="headerlink" title=" 2、需求分析  "></a><font color=#008000> 2、需求分析  </font></h4><blockquote>
+<p>数据字典：<br>数据项（最小单位）<br>数据结构（数据间组合关系）<br>数据流（数据结构在系统内的传输路径）<br>数据存储（数据结构停留或保存的地方）<br>处理过程</p>
+</blockquote>
+<h4 id="3、概念结构设计"><a href="#3、概念结构设计" class="headerlink" title=" 3、概念结构设计  "></a><font color=#008000> 3、概念结构设计  </font></h4><ul>
+<li>E-R模型</li>
+<li>实体之间的联系：两个实体型之间的联系：1：1 &#x2F; 1：n &#x2F; n：m ; 两个以上实体间的联系：同两个</li>
+<li>参与联系的实体型的数目成为联系的度。N元联系<br>-E-R图<ul>
+<li>实体型 -&gt; 矩形; 属性 -&gt; 椭圆; 联系 -&gt; 菱形(标注1:1, 1:n, n: m)</li>
+<li>(多理解一下课本上的例子)</li>
+</ul>
+</li>
+</ul>
+<h4 id="4、逻辑结构设计"><a href="#4、逻辑结构设计" class="headerlink" title=" 4、逻辑结构设计  "></a><font color=#008000> 4、逻辑结构设计  </font></h4><ul>
+<li>E-R图向关系模型的转换</li>
+</ul>
+<h2 id="第九章-关系查询处理和查询优化"><a href="#第九章-关系查询处理和查询优化" class="headerlink" title="第九章  关系查询处理和查询优化"></a>第九章  关系查询处理和查询优化</h2><h4 id="1、关系数据库系统的查询处理"><a href="#1、关系数据库系统的查询处理" class="headerlink" title=" 1、关系数据库系统的查询处理  "></a><font color=#008000> 1、关系数据库系统的查询处理  </font></h4><ul>
+<li><p>查询处理步骤<br>查询分析（语法）-&gt;查询检查（语义，视图，权限，完整性约束-&gt;关系代数表达式）-&gt;查询优化（代数优化、物理优化）-&gt;查询执行</p>
+</li>
+<li><p>视图消解法：把对视图的操作转换为对基本表的操作，由DBMS完成</p>
+</li>
+</ul>
+<h4 id="2、实现查询示例的算法示例"><a href="#2、实现查询示例的算法示例" class="headerlink" title=" 2、实现查询示例的算法示例  "></a><font color=#008000> 2、实现查询示例的算法示例  </font></h4><ul>
+<li><p>选择操作的实现</p>
+<ul>
+<li>简单的全表扫描算法（table scan）：读+判断，不适用选择率低的情况</li>
+<li>索引扫描算法（index scan）</li>
+</ul>
+</li>
+<li><p>连接操作的实现</p>
+<ul>
+<li>嵌套循环算法（nested loop join）：俩for循环</li>
+<li>排序-合并算法（sort-merge join&#x2F;merge join）：双指针</li>
+<li>索引连接算法（index join）</li>
+<li>hash join算法（？）</li>
+</ul>
+</li>
+<li><p>实例分析：<br>  eg：求选修了2号课程的学生的姓名。假定数据库中，有1000个学生记录，10000个选课记录，其中选修2号课程的选课记录为50个。</p>
+<ul>
+<li>先计算笛卡尔积：先算读入需要多少块，然后加上连接需要多少块，最后加上选择需要多少块。</li>
+<li>先做自然连接</li>
+<li>先选择</li>
+</ul>
+</li>
+<li><p>当选择和连接同时存在时，先做选择操作。</p>
+</li>
+</ul>
+<h4 id="3、代数优化（具体做的时候理解一下）"><a href="#3、代数优化（具体做的时候理解一下）" class="headerlink" title=" 3、代数优化（具体做的时候理解一下）  "></a><font color=#008000> 3、代数优化（具体做的时候理解一下）  </font></h4><ul>
+<li>关系代数表达式等价变换原则<ul>
+<li>连接、笛卡尔积的交换律 </li>
+<li>连接、笛卡尔积的结合律</li>
+<li>投影的串接定律</li>
+<li>选择的串接定律</li>
+<li>选择与投影操作的交换律</li>
+<li>选择与笛卡尔积的交换律</li>
+<li>选择与并的分配律</li>
+<li>选择与差运算的分配律</li>
+<li>选择对自然连接的分配律</li>
+<li>投影与笛卡尔积的分配律</li>
+<li>投影与并的分配律</li>
+</ul>
+</li>
+<li>查询树的启发式优化<ul>
+<li>典型的启发式规则：①先选择；②同时投影和选择；③把投影和其前后的双目运算所结合；④连接运算比笛卡尔积快；⑤找公共子表达式（具体含义没看懂）</li>
+</ul>
+</li>
+</ul>
+<h2 id="第十章-数据库恢复技术"><a href="#第十章-数据库恢复技术" class="headerlink" title="第十章 数据库恢复技术"></a>第十章 数据库恢复技术</h2><h4 id="1、事务"><a href="#1、事务" class="headerlink" title=" 1、事务  "></a><font color=#008000> 1、事务  </font></h4><h4 id="2、事务语句"><a href="#2、事务语句" class="headerlink" title=" 2、事务语句  "></a><font color=#008000> 2、事务语句  </font></h4><p>   begin transaction：<br>   commit：<br>   rollback:</p>
+<h4 id="3、事务的ACID特性"><a href="#3、事务的ACID特性" class="headerlink" title=" 3、事务的ACID特性  "></a><font color=#008000> 3、事务的ACID特性  </font></h4><p>Atomicity, Consistency, Isolation, Durability </p>
+<h4 id="4、事务故障：数据库被破坏，事务未完成"><a href="#4、事务故障：数据库被破坏，事务未完成" class="headerlink" title=" 4、事务故障：数据库被破坏，事务未完成  "></a><font color=#008000> 4、事务故障：数据库被破坏，事务未完成  </font></h4><ul>
+<li>事务内部故障：可预期; 不可预期</li>
+<li>系统故障（软故障）：回滚、redo</li>
+<li>介质故障</li>
+<li>计算机病毒</li>
+<li>故障对数据库影响的两种可能<br>借助冗余来实现恢复</li>
+</ul>
+<h4 id="5、恢复的实现技术"><a href="#5、恢复的实现技术" class="headerlink" title=" 5、恢复的实现技术  "></a><font color=#008000> 5、恢复的实现技术  </font></h4><ul>
+<li>数据转储（基本技术）<br>后备副本&#x2F;后援副本<br>静态转储; 动态转储(日志文件)<br>海量转储; 增量转储</li>
+<li>登记日志文件（记录更新操作）<br>以记录为单位的日志文件<ul>
+<li>内容：事务标识，操作类型，操作对象，更新前的旧值，更新后的新值<br>以数据为单位的日志文件<br>日志文件作用<br>登记日志文件原则: 时间顺序; 先日志后数据库</li>
+</ul>
+</li>
+</ul>
+<h4 id="6、恢复策略"><a href="#6、恢复策略" class="headerlink" title=" 6、恢复策略  "></a><font color=#008000> 6、恢复策略  </font></h4><ul>
+<li>事务故障恢复: 反向扫描日志，找更新操作 -&gt; 逆操作 -&gt; 直到开始</li>
+<li>系统故障恢复: 正向扫描日志文件，+redo_list &amp; + undo_list -&gt; undo队列undo -&gt; redo队列redo</li>
+<li>介质故障的恢复: 重装数据库(对动态转储而言，还要加上日志文件)，重做已完成的事务</li>
+</ul>
+<h4 id="7、具有检查点的数据恢复技术"><a href="#7、具有检查点的数据恢复技术" class="headerlink" title=" 7、具有检查点的数据恢复技术  "></a><font color=#008000> 7、具有检查点的数据恢复技术  </font></h4><ul>
+<li>检查点记录的内容：建立检查点时刻所有正在执行的事务清单，这些事务最近的日志记录的地址</li>
+<li>步骤：写日志 -&gt; 在日志中写检查点 -&gt; 数据缓冲区数据写入磁盘 -&gt; 把检查点记录的地址写入一个重新开始文件</li>
+</ul>
+<h2 id="第十一章-并发控制"><a href="#第十一章-并发控制" class="headerlink" title="第十一章 并发控制"></a>第十一章 并发控制</h2><ul>
+<li>并发控制的原因：①提高吞吐量和资源利用效率；②减少等待时间</li>
+</ul>
+<h4 id="1、三种数据不一致性"><a href="#1、三种数据不一致性" class="headerlink" title=" 1、三种数据不一致性  "></a><font color=#008000> 1、三种数据不一致性  </font></h4><ul>
+<li>丢失修改(lost update)(写写)  </li>
+<li>不可重复读(non-repeatable read)(读写), 三种情况，增删改</li>
+<li>读“脏”数据(dirty read)(写读撤)<br>破坏了事务的隔离性 <br/><br>并发控制的主要技术: 封锁(locking), 时间戳(timestamp), <u> 乐观控制法(optimistic scheduler) </u> 和 <u> 多版本并发控制(multi-version concurrency control, MVCC) </u> 等.</li>
+</ul>
+<blockquote>
+<p>基于时间戳的并发控制：<br>时间戳：当一个事务启动的时候，给这个事务一个时间戳。按照时间戳从小到大执行的操作是正确的，反之是不正确的，借助时间戳就不需要借助锁。如果存在冲突，就撤销该事务，并重启该事务，然后给该事务分配一个更靠后的时间戳。<br>冲突：读写，写写，写读<br>判断处理<br><a href="https://blog.csdn.net/qq_42902997/article/details/119352901">学习博客</a><br>乐观控制法</p>
+</blockquote>
+<h4 id="2、封锁"><a href="#2、封锁" class="headerlink" title=" 2、封锁  "></a><font color=#008000> 2、封锁  </font></h4><p>排他锁、共享锁</p>
+<h4 id="3、封锁协议"><a href="#3、封锁协议" class="headerlink" title=" 3、封锁协议 "></a><font color=#008000> 3、封锁协议 </font></h4><ul>
+<li>一级封锁协议：无法解决不可重复读和读“脏”数据</li>
+<li>二级封锁协议：以一级封锁协议为基础，读完释放</li>
+<li>三级封锁协议：以一级封锁协议为基础，事务结束释放<br>重点理解一下二级封锁协议和三级封锁协议之间的联系与区别</li>
+</ul>
+<h4 id="4、活锁和死锁"><a href="#4、活锁和死锁" class="headerlink" title=" 4、活锁和死锁  "></a><font color=#008000> 4、活锁和死锁  </font></h4><ul>
+<li>活锁：一直在等待，解决方法：先来先服务</li>
+<li>死锁：出现环</li>
+<li>死锁的预防<ul>
+<li>一次封锁法：某个事务所要用到的全部数据加锁</li>
+<li>顺序封锁法</li>
+</ul>
+</li>
+<li>死锁的诊断与解除<ul>
+<li>超时法</li>
+<li>等待图法(T1等待T2，T1指向T2)，方法是选择一个处理死锁代价最小的事务</li>
+</ul>
+</li>
+</ul>
+<h4 id="5、并发调度的可串行化"><a href="#5、并发调度的可串行化" class="headerlink" title=" 5、并发调度的可串行化  "></a><font color=#008000> 5、并发调度的可串行化  </font></h4><ul>
+<li>可串行化调度</li>
+<li>可串行性</li>
+<li>冲突可串行化调度 R<sub>i</sub>(x)与W<sub>j</sub>(x) &amp; W<sub>i</sub>(x)与W<sub>j</sub>(x)<blockquote>
+<p>不同事务的冲突操作和同一事务的两个操作是不可交换的<br>冲突可串行化调度<br>冲突可串行化调度是可串行化调度的充分条件<br>(?)：注意理解可串行化调度，感觉有点晕</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="6、两段锁协议-2PL协议"><a href="#6、两段锁协议-2PL协议" class="headerlink" title=" 6、两段锁协议(2PL协议)  "></a><font color=#008000> 6、两段锁协议(2PL协议)  </font></h4><ul>
+<li>加锁 + 解锁</li>
+<li>事务遵循两段锁协议是可串行化调度的充分条件，不是必要条件。</li>
+<li>一次封锁法与两段锁协议(可能发生死锁)</li>
+</ul>
+<h4 id="7、封锁的粒度"><a href="#7、封锁的粒度" class="headerlink" title=" 7、封锁的粒度  "></a><font color=#008000> 7、封锁的粒度  </font></h4><ul>
+<li>封锁粒度</li>
+<li>封锁粒度选择原则</li>
+<li>意向锁</li>
+<li>IS锁， IX锁， SIX锁</li>
+</ul>
+]]></content>
+      <categories>
+        <category>数据库学习</category>
+      </categories>
       <tags>
-        <tag>生活</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
